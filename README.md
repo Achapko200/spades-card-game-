@@ -1,10 +1,7 @@
-# spades-card-game-
 Overview
 
-The projects in this class will have you work your way up to create a game of Spades. Spades is a simple trick-taking card game. A trick-taking card game is one where whoever plays the highest card, however it is defined, during the "trick" wins the "trick." With Spades, there are four players who play in teams of two. The objective of the game is to have your team win 300 points or have the opposing team lose with -200 points. Points earned or lost are determined by how many tricks the team wins in comparison to how many tricks they predicted they would take during the game session (aka, their bid).
-
+The projects in this class will have you work your way up to create a game of Spades. Spades is a simple trick-taking card game. A trick-taking card game is one where whoever plays the highest card, however it is defined, during the "trick" wins the "trick." With Spades, there are four players who play in teams of two. The objective of the game is to have your team win 300 points or have the opposing team lose with -200 points. Points earned or lost are determined by how many tricks the team wins in comparison to how many tricks they predicted they would take during the game session (aka, their bid)
 If reading the rules don't help you to understand the game, then play a few games to get a feel for it. Our rules are mostly the same as the rules on this website.
-
 Rules
 
 Players
@@ -13,6 +10,7 @@ Four players
 Fixed partnerships of two. Partners sit opposite to each other. Deal and play is clockwise.
 Example: A list of players is [P0, P1, P2, P3]. Game play is clockwise so it always moves to the right in the array, which in the perspective of a player, it is to their left. P0 and P2 are on Team0 and P1 and P3 are on Team1.
 Cards
+
 52 cards
 Spades is trump, meaning it has a higher value than a card of another suit regardless of rank.
 Rank from highest to lowest: Ace, King, Queen, Jack, 10, 9 ,8 , 7, 6, 5, 4, 3, 2
@@ -41,11 +39,11 @@ The leading player cannot start with a Spade until there are no other cards of a
 Game play is clockwise.
 Each player must follow suit if able. If not, then the player can play any card.
 The winner of the trick leads the next trick.
-[Winning a Trick](url)
-
+Winning a Trick
 A trick containing a spade is won by the highest spade played.
 If no spade is played, then the trick is won by the highest card leading suit, meaning the highest card that played the same suit as the leading card.
 Scoring
+
 When a team takes at least or more tricks than they bid, then they receive a score equal to 10 times the bid. Any additional tricks are called bags and are worth an extra one point each.
 Example: Team One bid 5 tricks and won 5 tricks, therefore their score is current_score + 50.
 Example: Team Two bid 6 tricks and won 8 tricks so their score is current_score + 62.
@@ -63,13 +61,7 @@ Blind nil bids are worth double that of a regular nil bid meaning +/- 200 points
 Once the scoring is finished, if a team ends up with at least 300 points or higher, they win the game. If a team ends up with at least -200 points or lower, they lose the game. If neither team meet these criteria, then we deal cards to the players again and start again, keeping track of the score from previous sessions.
 Card class
 
-A Card object is represented by two attributes, a Rank and a Suit. The provided starter file Card.h is pretty self explanatory. Only thing I want to specify is that the comparison operators that we are overloading for the Cards should not be considering the trump suit or lead suit. It is only based on standard card values. Comparison of cards is based on suit first then rank. The card_less function on the other hand does consider trump suit and lead suit. Go back to 
-Winning a Trick
-
-A trick containing a spade is won by the highest spade played.
-If no spade is played, then the trick is won by the highest card leading suit, meaning the highest card that played the same suit as the leading card.
-
-
+A Card object is represented by two attributes, a Rank and a Suit. The provided starter file Card.h is pretty self explanatory. Only thing I want to specify is that the comparison operators that we are overloading for the Cards should not be considering the trump suit or lead suit. It is only based on standard card values. Comparison of cards is based on suit first then rank. The card_less function on the other hand does consider trump suit and lead suit. Go back to [[#Winning a Trick]] to read on how this should be determined.
 Pack class
 
 Once you finish creating the implementation of the Card class, then you can move onto the Pack class. A Pack object represents a pack of cards. There are different operations that you can act on these pack of card and these are declared in the provided starter file Pack.h.

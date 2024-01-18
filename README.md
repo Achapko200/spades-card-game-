@@ -1,5 +1,6 @@
 # spades-card-game-
 Overview
+
 The projects in this class will have you work your way up to create a game of Spades. Spades is a simple trick-taking card game. A trick-taking card game is one where whoever plays the highest card, however it is defined, during the "trick" wins the "trick." With Spades, there are four players who play in teams of two. The objective of the game is to have your team win 300 points or have the opposing team lose with -200 points. Points earned or lost are determined by how many tricks the team wins in comparison to how many tricks they predicted they would take during the game session (aka, their bid).
 
 If reading the rules don't help you to understand the game, then play a few games to get a feel for it. Our rules are mostly the same as the rules on this website.
